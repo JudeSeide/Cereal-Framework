@@ -1,0 +1,11 @@
+# Every request will load index.php, unless the file exists.
+RewriteEngine On
+RewriteRule ^(css|scripts|images|img|js|json)/r[\w:\.]+/(.*)$ $1/$2 [L]
+
+RewriteCond %{REQUEST_FILENAME} -s [OR]
+RewriteCond %{REQUEST_FILENAME} -l [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^.*$ - [NC,L]
+
+RewriteCond %{REQUEST_URI} !=/server-status
+RewriteRule ^.*$ index.php [NC,L]

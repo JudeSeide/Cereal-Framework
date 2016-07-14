@@ -1,0 +1,15 @@
+{
+    "name": "cereal/framework",
+    "description": "a php framework for the lazy ones",
+    "require": {
+        "vlucas/phpdotenv": "^2.3",
+        "monolog/monolog": "^1.20"
+    },
+    "authors": [
+        {
+            "name": "Jude Seide",
+            "email": "jude.seide@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable"
+}
