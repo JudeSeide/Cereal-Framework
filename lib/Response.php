@@ -10,7 +10,14 @@ class Response
         $this->template = new Template($path);
     }
 
-    // FIXME : this function should know when to json encode
+    /**
+     * By default this function will return json
+     * Edit to change behavior
+     *
+     * @param array $data
+     * @param string $path
+     * @return Template
+     */
     public static function send (array $data, $path = '/public/response.tpl.php') {
 
         self::$instance = new Response($path);

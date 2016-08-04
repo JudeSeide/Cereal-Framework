@@ -10,7 +10,3 @@ require_once __DIR__ . '/helper/functions.php';
 configure('lib');
 configure('app/Controllers');
 configure('app/Models');
-
-
-// FIXME : we should load the header from config
-header('Content-type: application/json; charset=utf-8');

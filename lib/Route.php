@@ -16,7 +16,13 @@ class Route
     }
 
     private static function block ($url) {
-        // TODO if $url in blacklist send access denied
+
+        $forbidden = env('BLOCKED_URLS');
+        $forbidden = explode('|', $forbidden);
+
+        if (in_array($forbidden, $url)) {
+            Util::show404('Access denied');
+        }
     }
 
     public static function run () {
